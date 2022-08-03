@@ -1,5 +1,19 @@
-.logo-image{
-    height: 50px;
-    width: 50px;
+.logo-image {
+    
+}
+
+.portrait1{
+    height: 150px;
+    width: 100px;
+}
+
+
+.portrait2{
+    height: 250px;
+    width: 500px;
+}
+.portfolio--image{
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
 }
