@@ -9,46 +9,110 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/style.css">
     <title>Andrew Ahn</title>
 </head>
 
 <body>
-<header>
-    <div class="logo">
+    <header>
+        <div class="logo">
 
-        <!--logo-->
-        <img src="/assets/media/Da_Vinci_Vitruve_Luc_Viatour.jpg" class="logo-image" alt="Logo">
-    </div>
+            <!--logo-->
+            <img src="/assets/media/Da_Vinci_Vitruve_Luc_Viatour.jpg" class="logo-image" alt="Logo">
+        </div>
 
-    <button class="nav-toggle" aria-label="toggle-navigation">
+        <button class="nav-toggle" aria-label="toggle-navigation">
 
-        <span class="hamburger">
+            <span class="hamburger">
 
-        </span>
+            </span>
 
-    </button>
-    <nav class="nav">
-        <ul class="nav--list">
-            <li class="nav--item"><a href="#" class="nav--link"> Home</a></li>
-            <li class="nav--item"><a href="#" class="nav--link"> My services</a></li>
-            <li class="nav--item"><a href="#" class="nav--link"> About Me</a></li>
-            <li class="nav--item"><a href="#" class="nav--link"> My Work</a></li>
-        </ul>
-    </nav>
-</header>
+        </button>
+        <nav class="nav">
+            <ul class="nav--list">
+                <li class="nav--item"><a href="#home" class="nav--link"> Home</a></li>
+                <li class="nav--item"><a href="#services" class="nav--link"> My services</a></li>
+                <li class="nav--item"><a href="#about" class="nav--link"> About Me</a></li>
+                <li class="nav--item"><a href="#" class="nav--link"> My Work</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!--Introduction-->
+    <!--Introduction-->
 
-<section class="into" id="home">
-    <h1 class="section--title section--title--intro">
-        Hi I am <strong> Andrew Ahn</strong>
-    </h1>
-    <p class="section--sub--title section--subtitle--intro">
-        Full Stack Web Developer and Programmer
-    </p>
-    <img src="/assets/media/AndrewPortrait.jpg" class="portrait" alt="A portrait of Andrew Ahn">
-</section>
+    <section class="into" id="home">
+        <h1 class="section--title section--title--intro">
+            Hi I am <strong> Andrew Ahn</strong>
+        </h1>
+        <p class="section--sub--title section--subtitle--intro">
+            Full Stack Web Developer and Programmer
+        </p>
+        <img src="/assets/media/AndrewPortrait.jpg" class="portrait" alt="A portrait of Andrew Ahn">
+    </section>
+
+    <!--My services-->
+
+    <section class="my-services" id="services">
+        <h2 class="section--title section--title--services">What I do</h2>
+        <!--Here need a series of columns to indicate competencies. Consider a carousel-->
+        <div class="services">
+
+            <!--service/competency-->
+            <div class="service">
+                <h3>Websites</h3>
+                <p>I started this journey with making websites, and it is still something I really enjoy. I use HTML,
+                    CSS, Javascript in most of the projects, and occasionaly MongoDB, Django and Flask.
+
+                    For all the skills, To improve and maintain them ( <a
+                        href="https://www.franklincovey.com/habit-7/">"sharpen the saw"</a>) I use the following.
+
+                    <ul>
+                        <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                        <li> <a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+                        <li><a href="https://www.codecademy.com/" target="_blank">CodeCademy</a></li>
+                        <li><a href="https://www.oreilly.com/" target="_blank">O'Reilly</a></li>
+                        <li><a href="https://app.pluralsight.com/library/" target="_blank">Pluralsight</a></p>
+                </li>
+                </ul>
+
+            </div>
+
+            <!--service/competency-->
+            <div class="service">
+                <h3>Javascript</h3>
+                <p>Javascript was the first real coding language I learned, by way of making websites. To practice it, I
+                    have made some projects.</p>
+
+            </div>
+
+            <!--service/competency-->
+            <div class="service">
+                <h3>Java</h3>
+                <p> I started learning Java as it is still the most widely used programming language, and among the more
+                    logical and easy to understand. It was also a good foundation for learning about Object Orientated
+                    Programming</p>
+            </div>
+
+            <!--service/competency-->
+            <div class="service">
+                <h3>Python</h3>
+                <p> After Javascript, and by way of Django and Flask, I started learning Python. </p>
+            </div>
+        </div>
+
+        <a href="#work" class="btn"> My Work</a>
+
+    </section>
+
+    <!-- About me -->
+    <section class="about--me" id="about">
+
+        <h2 class="section--title section--title--about">
+            Who I am!
+        </h2>
+        <p class="section--subtitle section--subtitle--about"></p>
+
+    </section>
 </body>
 
 </html>
