@@ -28,8 +28,8 @@
     --clr-dark: #303030;
     --clr-accent: #16e0bd;
 
-    --boxshadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25),
-                 0.125em 0.125em 0.25em rgba(0,0,0,0.15);
+    --boxshadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+        0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 
 }
 
@@ -74,7 +74,7 @@ section {
     padding: 5em 2em;
 }
 
-:focus{
+:focus {
     outline: 3px solid var(--clr-accent);
     outline-offset: 3px;
 }
@@ -129,9 +129,10 @@ strong {
 .section--title--intro strong {
     display: block;
 }
+
 /* Buttons */
 
-.btn{
+.btn {
     display: inline-block;
     padding: .5em 2.5em;
     background: var(--clr-accent);
@@ -148,8 +149,8 @@ strong {
     text-align: center;
 }
 
-.btn:hover{
-  transform: scale(1.2);
+.btn:hover {
+    transform: scale(1.2);
 }
 
 /*intro*/
@@ -173,13 +174,13 @@ strong {
         grid-template-columns: min-content max-content;
     }
 
-    .portrait1{
+    .portrait1 {
         grid-area: img;
         min-width: 250px;
         position: relative;
     }
 
-    .section--subtitle--intro{
+    .section--subtitle--intro {
         align-self: start;
         grid-column: -1/1;
         grid-row: 2;
@@ -205,7 +206,7 @@ strong {
 /*my services/competencies section */
 
 
-.my-services{
+.my-services {
     background-color: var(--clr-dark);
     background-image: url(../assets/media/coding-tunnel.jpg);
     background-size: cover;
@@ -214,16 +215,16 @@ strong {
     text-align: center;
 }
 
-.my-services ul{
+.my-services ul {
     display: inline-block;
 }
 
-.section--title--services{
+.section--title--services {
     color: var(--clr-accent);
     position: relative;
 }
 
-.section--title--services::after{
+.section--title--services::after {
     content: '';
     display: block;
     width: 3em;
@@ -237,7 +238,8 @@ strong {
 .services {
     margin-bottom: 4em;
 }
-.service{
+
+.service {
     max-width: 500px;
     margin: 0 auto;
 }
@@ -246,80 +248,96 @@ strong {
 
     /*creating grid*/
     .services {
-       display: flex;
-       max-width: 1000px;
-       margin-left: auto;
-       margin-right: auto;
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .service  + .service{
-        margin-left: 3em;        
+    .service+.service {
+        margin-left: 3em;
     }
 }
 
-.about-me{
+.about-me {
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.about-me-image{
-   box-shadow: var(--boxshadow);
+.about-me-image {
+    box-shadow: var(--boxshadow);
 }
 
-@media (min-width: 600px){
-    .about--me{
+@media (min-width: 600px) {
+    .about--me {
         display: grid;
         grid-template-columns: 1fr 200px;
-        grid-template-areas: 
-        "title img"
-        "subtitle img"
-        "text img";
-        grid-column-gap:2em ;
+        grid-template-areas:
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
     }
 
-    .about-me-image{
+    .about-me-image {
         grid-row: 1 /-1;
-        grid-column: 2; 
+        grid-column: 2;
         grid-area: img;
         border: black;
         position: relative;
-        
+
     }
 
-    .section--title--about{
+    .section--title--about {
         grid-area: title;
     }
 
-    .section--subtitle--about{
+    .section--subtitle--about {
         grid-column: 1/-1;
         grid-row: 2;
         position: relative;
-        left:-1em;
+        left: -1em;
         width: calc(100% + 2em);
-        padding-left:1em;
+        padding-left: 1em;
         padding-right: calc(200px + 4em);
     }
 }
 
-.my-work{
-    background-color:var(--clr-dark);
+.my-work {
+    background-color: var(--clr-dark);
     color: var(--clr-light);
     text-align: center;
 }
 
-.section--subtitle--work{
+.section--subtitle--work {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
 }
 
-.portfolio{
-    display: grid;    
-    grid-template-columns: repeat(4, minmax(0,1fr)); 
-  grid-auto-rows: minmax(min-content, max-content);
+.portfolio {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-/* .portfolio--image{
-    height:300px;
-    width:300px;
-} */
+.portfolio--image {
+    height: 300px;
+    width: 350px;
+    transition: transform 750ms cubic-bezier(.5, 0, 0.5, 1), opacity 250ms linear;
+}
+
+.portfolio--image:hover{
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+
+.portfolio--item {
+    background: var(--clr-dark);
+    overflow: hidden;
+}
+
+.portfolio--item:focus{
+    position: relative;
+    z-index: 2;
+}
