@@ -418,7 +418,7 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
-    transform: translateX(100%);
+    transform: translateX(100%);/*this value moves the nav offscreen if at 100%, javascript to bring it back */
     transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -440,4 +440,51 @@ header {
 
 .nav--link:hover{
     color: var(--clr-accent);
+}
+
+/* Hamburger menu stuff */
+
+.hamburger{    
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+background-color: var(--clr-dark);
+    width: 3em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+    margin-top: 5px;
+    margin-bottom: 5px;
+   
+}
+
+.hamburger::before,
+.hamburger::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before{
+    top: 6px;
+}
+
+.hamburger::after{
+    bottom: 6px;
+}
+
+.nav-toggle{
+    padding: 0.5em;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 200;
 }
