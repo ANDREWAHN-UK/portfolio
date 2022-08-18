@@ -33,7 +33,7 @@
 
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -420,7 +420,8 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
-    transform: translateX(100%);/*this value moves the nav offscreen if at 100%, javascript to bring it back */
+    transform: translateX(100%);
+    /*this value moves the nav offscreen if at 100%, javascript to bring it back */
     transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -433,53 +434,53 @@ header {
     align-items: center;
 }
 
-.nav--link{
+.nav--link {
     color: inherit;
     font-weight: var(--fw-bold);
     font-size: var(--fs-h3);
     text-decoration: none;
 }
 
-.nav--link:hover{
+.nav--link:hover {
     color: var(--clr-accent);
 }
 
 /* Hamburger menu stuff */
 
-.hamburger{    
+.hamburger {
     display: block;
     position: relative;
 }
 
 .hamburger,
 .hamburger::before,
-.hamburger::after{
-background-color: var(--clr-dark);
+.hamburger::after {
+    background-color: var(--clr-dark);
     width: 3em;
     height: 3px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
     margin-top: 5px;
-    margin-bottom: 5px;   
+    margin-bottom: 5px;
 }
 
 .hamburger::before,
-.hamburger::after{
+.hamburger::after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
 }
 
-.hamburger::before{
+.hamburger::before {
     top: 6px;
 }
 
-.hamburger::after{
+.hamburger::after {
     bottom: 6px;
 }
 
-.nav-toggle{
+.nav-toggle {
     padding: 0.5em;
     cursor: pointer;
     background: transparent;
@@ -490,29 +491,44 @@ background-color: var(--clr-dark);
     z-index: 200;
 }
 
-.nav-open .nav{
+.nav-open .nav {
     transform: translateX(0);
 }
 
-.nav-open .nav-toggle{
+.nav-open .nav-toggle {
     position: fixed;
 }
 
-.nav-open .hamburger,.nav-open .hamburger::before, .nav-open 
-.hamburger::after{
+.nav-open .hamburger,
+.nav-open .hamburger::before,
+.nav-open .hamburger::after {
     background-color: var(--clr-accent);
 }
 
 
-.nav-open .hamburger{
+.nav-open .hamburger {
     transform: rotate(.625turn);
 }
 
-.nav-open .hamburger::before{
+.nav-open .hamburger::before {
     transform: rotate(90deg) translateX(-10px);
 }
 
-.nav-open 
-.hamburger::after{
+.nav-open .hamburger::after {
     opacity: 0;
+}
+
+/* Individual portfolio items */
+
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.portfolio-item-individual p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
